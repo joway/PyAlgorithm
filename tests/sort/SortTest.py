@@ -23,17 +23,6 @@ class SortTest(GeneralTestCase):
     def get_reverse_data(self):
         return merge_sort(self.data)[::-1]
 
-    def loop(self, func, *args, **kwargs):
-        count = 10
-        for i in range(count):
-            self.assertTrue(self.is_sorted(func(*args, **kwargs)))
-
-    def is_sorted(self, data):
-        for i in range(1, len(data)):
-            if data[i - 1] > data[i]:
-                return False
-        return True
-
     def test_insert_sort(self):
         self.assertFalse(self.is_sorted(self.data))
         self.loop(insert_sort, self.data)
