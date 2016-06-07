@@ -24,8 +24,8 @@ install:
 script:
     - nosetests --cover-package=tests --with-coverage
 #    - python -m unittest discover -s tests -p "*.py" -v
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
 addons:
     code_climate:
         repo_token: f3e88232a9b26c48cbc2de4c2cc0b60faf6e4c43a73ae23bd609db623ff22d52
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

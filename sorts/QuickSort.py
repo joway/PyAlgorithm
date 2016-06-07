@@ -11,15 +11,18 @@
 """
 import random
 
+"""
+当递归深度到达一定时候, python 会报错
+python 默认递归最大深度为: 1000
+可使用 sys.setrecursionlimit(1500) 修改默认值
+"""
+
 
 def quick_sort(data, is_random=False):
-    if len(data) <= 1:
-        return data
     # 这里的循环方式采用了维基百科里的方式
     # 进行多少次递归取决于 数据本身的乱顺程度
-    # 当递归深度到达一定时候, python 会报错
-    # python 默认递归最大深度为: 1000
-    # 可使用 sys.setrecursionlimit(1500) 修改默认值
+    if len(data) <= 1:
+        return data
     if is_random:
         pivot = int(random.randint(0, len(data) - 1))
         data[0], data[pivot] = data[pivot], data[0]
