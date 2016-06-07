@@ -20,3 +20,4 @@ class GeneralTestCase(unittest.TestCase):
             if data[i - 1] > data[i]:
                 return False
         return True
+
