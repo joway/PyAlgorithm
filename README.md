@@ -2,8 +2,9 @@ PyAlgorithm
 ===
 
 [![travis](https://travis-ci.org/joway/PyAlgorithm.svg?branch=master)](https://travis-ci.org/joway/PyAlgorithm)
-[![codecov](https://codecov.io/gh/joway/PyAlgorithm/branch/master/graph/badge.svg)](https://codecov.io/gh/joway/PyAlgorithm)
-
+[![Code Climate](https://codeclimate.com/github/joway/PyAlgorithm/badges/gpa.svg)](https://codeclimate.com/github/joway/PyAlgorithm)
+[![Test Coverage](https://codeclimate.com/github/joway/PyAlgorithm/badges/coverage.svg)](https://codeclimate.com/github/joway/PyAlgorithm/coverage)
+[![Issue Count](https://codeclimate.com/github/joway/PyAlgorithm/badges/issue_count.svg)](https://codeclimate.com/github/joway/PyAlgorithm)
 
 Manifest :
 ------
