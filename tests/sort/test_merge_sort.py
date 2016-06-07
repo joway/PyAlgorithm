@@ -2,10 +2,10 @@ import math
 
 from sorts.MergeSort import merge_sort
 from sorts.MergeWithInsert import merge_with_insert
-from tests.sort.SortTest import SortTest
+from tests.sort.base_sort import BaseSortTestCase
 
 
-class MergeSortTest(SortTest):
+class MergeBaseSortTestCase(BaseSortTestCase):
     def test_merge(self):
         self.assertFalse(self.is_sorted(self.data))
         self.loop(merge_sort, self.data)

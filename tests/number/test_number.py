@@ -1,8 +1,8 @@
 from numberTheory.Fibonacci import fibonacci_log_n
-from tests.GeneralTestCase import GeneralTestCase
+from tests.base_test_case import BaseTestCase
 
 
-class SearchTest(GeneralTestCase):
+class SearchTest(BaseTestCase):
     def setUp(self):
         super().setUp()
         self.num = 100

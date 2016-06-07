@@ -19,5 +19,8 @@ env:
 install:
     - "pip wheel -r requirements.txt"
     - "pip install -r requirements.txt"
+    - "pip install coveralls"
 # command to run tests
-script: python -m unittest discover -s tests -p "*.py" -v
+script:
+    - nosetests --cover-package=tests --with-coverage
+#    - python -m unittest discover -s tests -p "*.py" -v

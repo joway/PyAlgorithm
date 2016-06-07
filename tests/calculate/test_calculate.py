@@ -1,8 +1,8 @@
 from calculation.Power import power, power_bad
-from tests.GeneralTestCase import GeneralTestCase
+from tests.base_test_case import BaseTestCase
 
 
-class CalculateTest(GeneralTestCase):
+class CalculateTest(BaseTestCase):
     def setUp(self):
         super().setUp()
         self.num = 1000000

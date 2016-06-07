@@ -2,7 +2,7 @@ import time
 import unittest
 
 
-class GeneralTestCase(unittest.TestCase):
+class BaseTestCase(unittest.TestCase):
     def setUp(self):
         print('-----------------------')
         print('Begin', self.__class__)

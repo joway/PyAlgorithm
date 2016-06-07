@@ -1,10 +1,10 @@
 from graphs.Dijkstra import Dijkstra
 from graphs.Floyd import Floyd
 from graphs.Graph import Graph
-from tests.GeneralTestCase import GeneralTestCase
+from tests.base_test_case import BaseTestCase
 
 
-class GraphTest(GeneralTestCase):
+class GraphTest(BaseTestCase):
     def setUp(self):
         super().setUp()
         # self.graphs = [[1000, 1, 2, 1000],
@@ -17,9 +17,3 @@ class GraphTest(GeneralTestCase):
         floyd = Floyd(graph=self.graph)
         dijkstra = Dijkstra(graph=self.graph)
         self.assertEqual(floyd.shortest_path(0, 1), dijkstra.shortest_path(0, 1))
-
-
-        # def test_dijkstra(self):
-        #     print(self.graphs)
-        #     dijkstra = Dijkstra(graphs=self.graphs)
-        #     print(dijkstra.shortest_path(0, 1))

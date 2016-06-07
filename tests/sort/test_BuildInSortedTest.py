@@ -1,7 +1,7 @@
-from tests.sort.SortTest import SortTest
+from tests.sort.base_sort import BaseSortTestCase
 
 
-class QuickSortTest(SortTest):
+class QuickBaseSortTestCase(BaseSortTestCase):
     def test_build_in_sorted(self):
         self.loop(sorted, self.data)
 

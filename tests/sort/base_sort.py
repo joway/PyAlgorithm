@@ -1,10 +1,10 @@
 import random
 
 from sorts.MergeSort import merge_sort
-from tests.GeneralTestCase import GeneralTestCase
+from tests.base_test_case import BaseTestCase
 
 
-class SortTest(GeneralTestCase):
+class BaseSortTestCase(BaseTestCase):
     def setUp(self):
         super().setUp()
         self.length = 1000
