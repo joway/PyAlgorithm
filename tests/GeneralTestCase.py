@@ -15,7 +15,7 @@ class GeneralTestCase(unittest.TestCase):
         print('-----------------------')
 
     def loop(self, func, *args, **kwargs):
-        count = 10
+        count = 1
         for i in range(count):
             func(*args, **kwargs)
 

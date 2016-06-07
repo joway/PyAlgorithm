@@ -157,5 +157,5 @@ class BSTree(object):
 tree = BSTree()
 tree.insert([3, 2, 4, 1, 2.5, 3.5, 5])
 print(tree.search(2.5, 1).parent)
-# print(tree.search(4, 1))
+# print(trees.search(4, 1))
 tree.show()

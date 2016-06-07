@@ -1,7 +1,7 @@
 import random
 
-from sort.InsertSort import insert_sort
-from sort.MergeSort import merge_sort, merge
+from sorts.InsertSort import insert_sort
+from sorts.MergeSort import merge_sort, merge
 
 
 def merge_with_insert(data, log_n):
