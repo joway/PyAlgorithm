@@ -3,11 +3,11 @@ import unittest
 
 
 class GeneralTestCase(unittest.TestCase):
-
     def setUp(self):
         print('-----------------------')
         print('Begin', self.__class__)
         self.begin_at = time.time()
+        self.MAX = 100
 
     def tearDown(self):
         print("Used time : %s s" % str((time.time() - self.begin_at))[:8])

@@ -1,30 +1,34 @@
 import copy
 
-from graph.Graph import Graph
+from .Graph import Graph
 
 '''
 多源最短路
+
+时间复杂度为 {O(N^{3})} 空间复杂度为 { O(N^{2})} 。
+
+一次性得到所有点的最短路径
 '''
 
 
 class Floyd(Graph):
-    def __init__(self, size=10):
-        super().__init__(size=size)
-        self.MAX = 100
-        self.result = copy.deepcopy(self.graph)
-        self.path = 0
-        self.sorted()
+    def __init__(self, size=10, graph=None):
+        super().__init__(size=size, graph=graph)
+        self.result = self.floyd_sort(self.graph)
 
-    def sorted(self):
-        for k in range(0, self.size):
-            for i in range(0, self.size):
-                for j in range(0, self.size):
-                    if self.result[i][j] > 0 \
-                            and self.result[i][k] + self.result[k][j] < self.result[i][j]:
-                        self.result[i][j] = self.result[i][k] + self.result[k][j]
-                        self.path = k
+    @classmethod
+    def floyd_sort(cls, graph):
+        size = len(graph)
+        result = copy.deepcopy(graph)
+        # k 为经过的点
+        for k in range(0, size):
+            for i in range(0, size):
+                for j in range(0, size):
+                    if i != j:
+                        result[i][j] = min(result[i][j], result[i][k] + result[k][j])
+        return result
 
-    def search(self, start, end):
+    def shortest_path(self, start, end):
         return self.result[start][end]
 
     def show_sorted(self):
