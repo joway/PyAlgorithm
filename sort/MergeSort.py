@@ -1,3 +1,10 @@
+"""
+O(n log n)
+永远 O(n log n)运行时间
+但是需要Ω(n)额外的空间
+"""
+
+
 def merge(left, right):
     curL = curR = 0
     result = []

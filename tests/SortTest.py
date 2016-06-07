@@ -4,6 +4,7 @@ import random
 from sort.InsertSort import insert_sort
 from sort.MergeSort import merge_sort
 from sort.MergeWithInsert import merge_with_insert
+from sort.QuickSort import quick_sort
 from tests.GeneralTestCase import GeneralTestCase
 
 
@@ -45,3 +46,11 @@ class SortTest(GeneralTestCase):
     def test_merge_with_insert_worst(self):
         self.assertFalse(self.is_sorted(self.reverse_data))
         self.loop(merge_with_insert, self.reverse_data, int(math.log(self.length, 2)))
+
+    def test_quick_sort(self):
+        self.assertFalse(self.is_sorted(self.reverse_data))
+        self.loop(quick_sort, self.data)
+
+    def test_quick_sort_worst(self):
+        self.assertFalse(self.is_sorted(self.reverse_data))
+        self.loop(quick_sort, self.reverse_data)

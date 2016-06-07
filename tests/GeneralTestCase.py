@@ -1,12 +1,16 @@
+import time
 import unittest
 
 
 class GeneralTestCase(unittest.TestCase):
+
     def setUp(self):
         print('-----------------------')
         print('Begin', self.__class__)
+        self.begin_at = time.time()
 
     def tearDown(self):
+        print("Used time : %s s" % str((time.time() - self.begin_at))[:8])
         print('End', self.__class__)
         print('-----------------------')
 
@@ -20,4 +24,3 @@ class GeneralTestCase(unittest.TestCase):
             if data[i - 1] > data[i]:
                 return False
         return True
-
