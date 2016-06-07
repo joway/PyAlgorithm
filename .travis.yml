@@ -24,3 +24,5 @@ install:
 script:
     - nosetests --cover-package=tests --with-coverage
 #    - python -m unittest discover -s tests -p "*.py" -v
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
