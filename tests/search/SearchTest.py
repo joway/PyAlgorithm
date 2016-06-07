@@ -1,6 +1,6 @@
 import random
 
-from search.BinarySearch import binary_search
+from searches.BinarySearch import binary_search
 from sorts.MergeSort import merge_sort
 from tests.GeneralTestCase import GeneralTestCase
 

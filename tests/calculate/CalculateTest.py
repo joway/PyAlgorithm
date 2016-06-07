@@ -1,4 +1,4 @@
-from calculate.Power import power, power_bad
+from calculation.Power import power, power_bad
 from tests.GeneralTestCase import GeneralTestCase
 
 
