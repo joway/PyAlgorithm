@@ -1,8 +1,8 @@
 # Binary Search Tree
-from trees.BinaryTree import BinaryTree
+from datastructure.trees import binary_tree
 
 
-class BSTree(BinaryTree):
+class BSTree(binary_tree):
     def __init__(self, value):
         super().__init__(value)
 

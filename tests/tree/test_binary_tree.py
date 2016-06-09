@@ -1,5 +1,5 @@
+from datastructure.trees.binary_tree import BinaryTree
 from tests.base_test_case import BaseTestCase
-from trees.BinaryTree import BinaryTree
 
 
 class BinaryTreeTestCase(BaseTestCase):

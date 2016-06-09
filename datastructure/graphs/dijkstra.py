@@ -1,6 +1,6 @@
 import copy
 
-from .Graph import Graph
+from .graph import Graph
 
 '''
 单源最短路

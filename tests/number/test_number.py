@@ -1,4 +1,4 @@
-from numberTheory.Fibonacci import fibonacci_log_n
+from algorithm.numberTheory.fibonacci import fibonacci_log_n
 from tests.base_test_case import BaseTestCase
 
 

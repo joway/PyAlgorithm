@@ -1,6 +1,4 @@
-from nose.tools import assert_equal
-
-from sorts.QuickSort import quick_sort
+from algorithm.sorts.quick_sort import quick_sort
 from tests.sort.base_sort import BaseSortTestCase
 
 

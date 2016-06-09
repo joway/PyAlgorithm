@@ -1,13 +1,13 @@
 import random
 
-from sorts.MergeSort import merge_sort
+from algorithm.sorts.merge_sort import merge_sort
 from tests.base_test_case import BaseTestCase
 
 
 class BaseSortTestCase(BaseTestCase):
     def setUp(self):
         super().setUp()
-        self.length = 1000000000
+        self.length = 1000
         self.data = self.init_data()
         self.reverse_data = self.get_reverse_data()
 

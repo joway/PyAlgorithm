@@ -1,6 +1,6 @@
-from graphs.Dijkstra import Dijkstra
-from graphs.Floyd import Floyd
-from graphs.Graph import Graph
+from datastructure.graphs.dijkstra import Dijkstra
+from datastructure.graphs.floyd import Floyd
+from datastructure.graphs.graph import Graph
 from tests.base_test_case import BaseTestCase
 
 

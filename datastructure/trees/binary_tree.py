@@ -1,6 +1,6 @@
 import math
 
-from trees.Tree import Tree
+from datastructure.trees.tree import Tree
 
 # 二叉树
 from utils import DataFormatException

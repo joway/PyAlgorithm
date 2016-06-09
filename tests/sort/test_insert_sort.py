@@ -1,4 +1,4 @@
-from sorts.InsertSort import insert_sort
+from algorithm.sorts.insert_sort import insert_sort
 from tests.sort.base_sort import BaseSortTestCase
 
 

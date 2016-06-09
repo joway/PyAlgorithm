@@ -1,7 +1,7 @@
 import math
 
-from sorts.MergeSort import merge_sort
-from sorts.MergeWithInsert import merge_with_insert
+from algorithm.sorts.merge_sort import merge_sort
+from algorithm.sorts.merge_withInsert import merge_with_insert
 from tests.sort.base_sort import BaseSortTestCase
 
 

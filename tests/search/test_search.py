@@ -1,7 +1,7 @@
 import random
 
-from searches.BinarySearch import binary_search
-from sorts.MergeSort import merge_sort
+from algorithm.searches.binary_search import binary_search
+from algorithm.sorts.merge_sort import merge_sort
 from tests.base_test_case import BaseTestCase
 
 
