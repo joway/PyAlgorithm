@@ -20,3 +20,6 @@ class BinaryHeap(object):
 
     def heap_sort(self):
         pass
+
+    def left(self, pos):
+        return self.heap[2 * pos + 1]
