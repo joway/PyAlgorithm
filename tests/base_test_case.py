@@ -8,6 +8,7 @@ class BaseTestCase(unittest.TestCase):
         print('Begin', self.__class__)
         self.begin_at = time.time()
         self.MAX = 100
+        self.LOOP = 10
 
     def tearDown(self):
         print("Used time : %s s" % str((time.time() - self.begin_at))[:8])
@@ -15,8 +16,7 @@ class BaseTestCase(unittest.TestCase):
         print('-----------------------')
 
     def loop(self, func, *args, **kwargs):
-        count = 1
-        for i in range(count):
+        for i in range(self.LOOP):
             print(func(*args, **kwargs))
 
     def is_sorted(self, data):
