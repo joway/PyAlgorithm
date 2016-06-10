@@ -1,21 +1,19 @@
-def max_with_none(x, y):
+def compare_with_none(x, y, func):
     if x is None and y is None:
         return None
     elif x is None and y is not None:
         return y
     elif x is not None and y is None:
         return x
-    return max(x, y)
+    return func(x, y)
+
+
+def max_with_none(x, y):
+    return compare_with_none(x, y, max)
 
 
 def min_with_none(x, y):
-    if x is None and y is None:
-        return None
-    elif x is None and y is not None:
-        return y
-    elif x is not None and y is None:
-        return x
-    return min(x, y)
+    return compare_with_none(x, y, min)
 
 
 def get_digits(num):
