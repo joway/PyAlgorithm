@@ -7,5 +7,4 @@ class CountingSortTestCase(BaseSortTestCase):
         super().setUp()
 
     def test_count_sort_max(self):
-        self.assertFalse(self.is_sorted(self.data))
         self.loop(counting_sort, self.data)

@@ -10,12 +10,8 @@ class HeapSortTestCase(BaseSortTestCase):
         self.min_heap = BinaryHeap(self.data, is_max_heap=False)
 
     def test_heap_sort_max(self):
-        self.assertFalse(self.is_sorted(self.data))
-        self.loop(heap_sort, self.max_heap)
-        self.assertTrue(self.is_sorted(heap_sort(self.max_heap)), True)
+        self.loop(heap_sort, self.max_heap, increasing=False)
 
     def test_heap_sort_min(self):
-        self.assertFalse(self.is_sorted(self.data))
         self.loop(heap_sort, self.min_heap)
-        self.assertTrue(self.is_sorted(heap_sort(self.min_heap)), True)
 

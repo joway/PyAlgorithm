@@ -1,21 +1,13 @@
-import random
-
-from algorithm.sorts.merge_sort import merge_sort
 from tests.base_test_case import BaseTestCase
 
 
 class BaseSortTestCase(BaseTestCase):
     def setUp(self):
         super().setUp()
-        self.length = 1000
-        self.data = self.init_data()
         self.reverse_data = self.get_reverse_data()
+        self.assertFalse(self.is_sorted(self.data))
+        self.LOOP = 10
 
-    def init_data(self):
-        data = []
-        for i in range(0, self.length):
-            data.append(int(random.random() * self.length))
-        return data
-
-    def get_reverse_data(self):
-        return merge_sort(self.data)[::-1]
+    def loop(self, func, *args, **kwargs):
+        for i in range(self.LOOP):
+            self.assert_sorted(func(*args), **kwargs)

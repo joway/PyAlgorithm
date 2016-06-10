@@ -8,7 +8,7 @@ class CalculateTest(BaseTestCase):
         self.num = 1000
 
     def test_power(self):
-        self.loop(power, 20, self.num)
+        self.loop(power, 20, self.num, assert_func=self.assert_equal, assert_data=20 ** self.num)
 
     def test_power_bad(self):
-        self.loop(power_bad, 20, self.num)
+        self.loop(power_bad, 20, self.num, assert_func=self.assert_equal, assert_data=20 ** self.num)

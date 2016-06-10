@@ -2,7 +2,9 @@ from datastructure.trees.binary_heap import BinaryHeap
 from utils.exceptions import DataFormatException
 
 
-def heap_sort(heap):
+def heap_sort(heap, is_max_heap=True):
+    if isinstance(heap, list):
+        heap = BinaryHeap(data=heap, is_max_heap=is_max_heap)
     if not isinstance(heap, BinaryHeap):
         raise DataFormatException
     result = []
@@ -12,4 +14,3 @@ def heap_sort(heap):
         heap.del_last()
         heap.down_heapify(0)
     return result
-

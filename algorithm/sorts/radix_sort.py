@@ -7,7 +7,6 @@ import math
 def radix_sort(data, radix=10):
     # bits = log n 时, 最佳
     bits = int(math.ceil(math.log(max(data), radix)))
-    # box = [(value % 10 ** (i + 1) // 10 ** i, value) for value in data]
     result = data
     for i in range(0, bits):
         # 以第 i 位数字为基准,对 data 元素进行排序:
