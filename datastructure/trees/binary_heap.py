@@ -1,11 +1,12 @@
 """
+二叉堆
+
 Parent(i) = floor((i-1)/2)，i 的父节点下标
 Left(i) = 2i + 1，i 的左子节点下标
 Right(i) = 2(i + 1)，i 的右子节点下标
 
 """
 
-# 完全二叉树
 import math
 
 from utils.utils import max_with_none, min_with_none

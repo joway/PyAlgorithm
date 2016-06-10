@@ -4,14 +4,18 @@ from tests.sort.base_sort import BaseSortTestCase
 
 
 class HeapSortTestCase(BaseSortTestCase):
+    def setUp(self):
+        super().setUp()
+        self.max_heap = BinaryHeap(self.data)
+        self.min_heap = BinaryHeap(self.data, is_max_heap=False)
+
     def test_heap_sort_max(self):
         self.assertFalse(self.is_sorted(self.data))
-        heap = BinaryHeap(self.data)
-        self.loop(heap_sort, heap)
-        self.assertTrue(self.is_sorted(heap_sort(heap)), True)
+        self.loop(heap_sort, self.max_heap)
+        self.assertTrue(self.is_sorted(heap_sort(self.max_heap)), True)
 
     def test_heap_sort_min(self):
         self.assertFalse(self.is_sorted(self.data))
-        heap = BinaryHeap(self.data, False)
-        self.loop(heap_sort, heap)
+        self.loop(heap_sort, self.min_heap)
+        self.assertTrue(self.is_sorted(heap_sort(self.min_heap)), True)
 
