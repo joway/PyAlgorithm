@@ -3,7 +3,7 @@ import math
 from datastructure.trees.tree import Tree
 
 # 二叉树
-from utils import DataFormatException
+from utils.exceptions import DataFormatException
 
 
 class BinaryTree(Tree):

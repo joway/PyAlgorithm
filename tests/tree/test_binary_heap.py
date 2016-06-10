@@ -7,6 +7,8 @@ class BinaryHeapTestCase(BaseTestCase):
         super().setUp()
 
     def test_binary_tree(self):
-        data = [x for x in range(0, 16)]
-        heap = BinaryHeap(data)
+        data = [x for x in range(0, 15)]
+        heap = BinaryHeap(data, False)
+        print(heap)
+        heap.del_last()
         print(heap)
