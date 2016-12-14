@@ -16,4 +16,5 @@ class GraphTest(BaseTestCase):
     def test_graph(self):
         floyd = Floyd(graph=self.graph)
         dijkstra = Dijkstra(graph=self.graph)
+        dijkstra.show()
         self.assertEqual(floyd.shortest_path(0, 1), dijkstra.shortest_path(0, 1))

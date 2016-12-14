@@ -1,3 +1,6 @@
+"""
+n * log n
+"""
 from datastructure.trees.binary_heap import BinaryHeap
 from utils.exceptions import DataFormatException
 
