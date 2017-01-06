@@ -24,11 +24,11 @@ bankers = Bankers(processes=PROCESSES, resources=RESOURCES, status=_status)
 print('------------')
 print('输出安全序列')
 
-# sequences = bankers.safe_sequences()
-# for row in sequences:
-#     print('安全序列为 : %s' % row)
+sequences = bankers.safe_sequences()
+for row in sequences:
+    print('安全序列为 : %s' % row)
 
 print('------------')
 request_1 = [1, 0, 1]
 print('输入序列 %s' % bankers.request_res(1, request_1))
-print(len(bankers.safe_sequences()))
+print(bankers.safe_sequences())
