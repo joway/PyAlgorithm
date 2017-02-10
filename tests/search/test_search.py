@@ -6,9 +6,13 @@ from tests.base_test_case import BaseTestCase
 class SearchTest(BaseTestCase):
     def setUp(self):
         super().setUp()
-        self.data = merge_sort(self.init_data())
+        self.unique_data = merge_sort(self.unique_data)
+        self.data = merge_sort(self.data)
 
     def test_binary_search(self):
-        value = self.data[len(self.data) // 2]
-        cur = binary_search(value, self.data)
-        self.assertEqual(cur, len(self.data) // 2)
+        print(self.unique_data[0], self.unique_data)
+        self.assertEqual(binary_search(self.unique_data[0], self.unique_data), 0)
+        self.assertEqual(binary_search(self.unique_data[len(self.unique_data) - 1], self.unique_data),
+                         len(self.unique_data) - 1)
+        self.assertEqual(binary_search(self.unique_data[len(self.unique_data) // 2], self.unique_data), len(self.unique_data) // 2)
+        self.assertEqual(binary_search(-100000, self.data), -1)

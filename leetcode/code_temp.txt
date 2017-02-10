@@ -1,0 +1,18 @@
+""" Summary
+
+"""
+
+
+class Solution(object):
+    """
+    Problem:
+
+    Example:
+
+    """
+
+
+if __name__ == '__main__':
+    nums = []
+    result = Solution().{{ method }}(nums)
+    print(result)

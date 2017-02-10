@@ -12,6 +12,7 @@ class BaseTestCase(unittest.TestCase):
         self.LOOP = 1
         self.length = 100
         self.data = self.init_data()
+        self.unique_data = list(set(self.data))
 
     def tearDown(self):
         print("Used time : %s s" % str((time.time() - self.begin_at))[:8])
